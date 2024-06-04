@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="Madhu Kumar">
+	<title>Login-app</title>
+	<meta name="description" content="A login app that was created using Django.
+	The MySQL database is utilized for storing user information and authenticating users.">
+
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+	<div class="container">
+		<h1>Login</h1>
+		<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			
+			<div class="input-box">
+				
+				<input type="text" name="username" placeholder="Name" required>
+				<i class='bx bxs-user'></i>
+			</div>
+			<div class="input-box">
+				
+				<input id="pwd" type="password" name="password" placeholder="Password" required >
+				<i class='bx bxs-lock show'></i>
+			</div>
+			<div class="forgot-password">
+				<a href="{%url 'changePWD'%}">Forgot password</a>
+			</div>
+			
+			<button type="submit" class="btn">Login</button>
+
+			<div class="register">
+				<p>Don't have account?<a href="{%url 'signup'%}">Register</a></p>
+			</div>
+			
+            <div class="msg">
+                {% if messages %}
+                {% for result in messages %}
+                <p>{{result}}</p>
+                {% endfor %}
+                {% endif %}
+            </div>
+              
+		</form>
+	</div>
+</body>
+</html>

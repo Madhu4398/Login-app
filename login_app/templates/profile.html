@@ -1,0 +1,39 @@
+{% csrf_token %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login-app</title>
+
+  <style type="text/css">
+    body{
+      margin-top: 20%;
+      margin-left: 25%;
+      font-size: 40px;
+      color: red;
+      background-color: aquamarine;
+      
+    }
+    button {
+      margin-left: 30%;
+      background-color: white;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+	{% block start %}
+    {% if messages %}
+  {% for message in messages %}
+ 
+  <h1>welcome back {{message}}!</h1>
+ 
+  {% endfor %}
+  <button type="submit" class="btn"><a href="">Logout</a></button>
+  {% endif %}
+    {% endblock %}
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login-app</title>
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+</head>
+
+<body>
+	
+	<div class="container">
+		<h1>Signup</h1>
+		<form method="POST">
+			{% csrf_token %}
+			{{ form.as_p }}
+			
+			<div class="input-box">
+					
+				<input type="text" name="username" placeholder="Name" required>
+				<i class='bx bxs-user'></i>
+			</div>
+			<div class="input-box">
+				
+				<input type="password" name="pwd" placeholder="Password" required id="pswd">
+				<i class='bx bxs-lock show'></i>
+			</div>
+			<button type="submit" class="btn">Signup</button>
+
+			<div class="msg">
+				{% if messages %}
+				{% for result in messages %}
+				<p>{{result}}</p>
+				{% endfor %}
+				<div class="redirect">
+					<p >Login after register: <a href="/">Login</a></p>
+				</div>
+
+				{% endif %}
+				
+			</div>
+			
+			
+		</form>
+		
+		<div id="pswd_info">
+			<h4>Password requirements:</h4>
+			<ul>
+				<li>At least <strong>8 characters</strong></li>
+				<li>At least <strong>one Lowercase letter</strong></li>
+				<li >At least <strong>one Uppercase letter</strong></li>
+				<li>At least <strong>one number</strong></li>
+				<li>At least <strong>one Special character</strong></li>
+			
+			</ul>
+		</div>
+
+	</div>
+	
+	
+</body>
+</html>

@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: aquamarine;
+    
+}
+
+.container{
+    width: 420px;
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 10px;
+    padding: 30px 40px;
+    
+}
+
+.container h1{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: #fff;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform:translateY(-50%);
+    font-size: 20px;
+}
+
+.container .forgot-password {
+    display: flex;
+    justify-content: right;
+    font-size: 16px;
+    margin: -15px 0 15px;
+}
+
+.forgot-password label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.forgot-password a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+.container .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.container .register {
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register p a:hover {
+    text-decoration: underline;
+}
+
+.container .btns{
+    display: flex;
+    gap: 10px;
+}
+
+.container .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+a {
+    margin: 10px;
+    color: white;
+}
+
+.msg p {
+    margin: 10px;
+    color: #fff;
+    font-size: larger;
+    text-align: center;
+    font-weight: bold;
+}
+
+.redirect p {
+    margin-top: 5px;
+    text-align: center;
+  }
+.redirect a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+  }
+.redirect p a:hover {
+    text-decoration: underline;
+}
+
+#pswd_info {
+   margin: 20px;
+   margin-bottom: 0;
+}
