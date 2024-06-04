@@ -14,7 +14,7 @@ A login app was created using Django HTML and MySql database for storage.
 Clone this project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Madhu4398/Login-app.git
 ```
 
 Go to the project directory
